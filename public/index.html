@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Notes and Modules</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">.......Eternal Blue.......</div>
+        <nav>
+            <a href="/blue">Home</a>
+            <a href="#">My Diary</a>
+            <a href="/blue/create">Create</a>
+            <a href="../board/board.html">My Board</a>
+        </nav>
+        <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" placeholder="Search">
+        </div>
+    </div>
+
+    <!-- Added a spacer to prevent overlap with the navbar -->
+    <div class="spacer"></div>
+
+    <!-- Buttons to toggle input forms -->
+    <div class="buttons-section">
+        <button class="toggle-button">Add Sticky Note</button>
+        <button class="toggle-button">Add Module</button>
+    </div>
+
+    <!-- Input forms below the buttons -->
+    <div class="input-section">
+        <div id="sticky-note-input" class="form-container hidden">
+            <h3>Add a Sticky Note</h3>
+            <input type="text" id="sticky-title" placeholder="Title" class="input-field">
+            <textarea id="sticky-content" placeholder="Enter items for sticky note (separated by commas)" class="input-field"></textarea>
+            <button onclick="addStickyNote()">Add Sticky Note</button>
+        </div>
+
+        <div id="module-input" class="form-container hidden">
+            <h3>Add a Module</h3>
+            <input type="text" id="module-title" placeholder="Title" class="input-field">
+            <textarea id="module-content" placeholder="Enter class names (separated by commas)" class="input-field"></textarea>
+            <input type="file" id="module-files" multiple>
+            <button onclick="addModule()">Add Module</button>
+        </div>
+        
+    </div>
+
+    <!-- Heading for Sticky Notes -->
+    <h2 class="section-heading">
+        <span class="letter-circle">S</span>
+        <span class="letter-circle">T</span>
+        <span class="letter-circle">I</span>
+        <span class="letter-circle">C</span>
+        <span class="letter-circle">K</span>
+        <span class="letter-circle">y</span>
+    </h2>
+    <div id="sticky-notes-container" class="flex-container"></div>
+
+    <!-- Heading for Modules -->
+    <h2 class="section-heading">
+        <span class="letter-circle">l</span>
+        <span class="letter-circle">e</span>
+        <span class="letter-circle">a</span>
+        <span class="letter-circle">r</span>
+        <span class="letter-circle">n</span>
+    </h2>
+    <div id="modules-container" class="flex-container"></div>
+
+    <script src="/script/script.js"></script>
+</body>
+</html>

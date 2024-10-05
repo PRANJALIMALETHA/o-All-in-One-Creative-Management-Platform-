@@ -1,0 +1,408 @@
+/* General styling */
+body {
+    /* Changed to bold modern font */
+    font-family: 'Lobster', cursive; 
+    background-color: #FFFBEB; /* Fallback color */
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Spacer to offset the fixed navbar */
+.spacer {
+    height: 80px; /* Adjust based on navbar height */
+}
+
+/* Headings */
+.section-heading {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold; /* Make headings bold */
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D2E0FB; /* Maintain original color */
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Remove space above */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Navbar links */
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 18px; /* Increase size */
+    transition: color 0.3s; /* Transition for hover effect */
+}
+
+/* Change color on hover */
+.navbar a:hover {
+    color: #4a4a4a; /* Darken color on hover */
+}
+
+/* Logo styling */
+.navbar .logo {
+    font-size: 24px; /* Increase the font size for better visibility */
+    font-family: 'Dancing Script', cursive; /* Handwritten font */
+}
+
+/* Search box styling */
+.search-box {
+    display: flex; /* Align icon and input in a row */
+    align-items: center;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    margin-left: 5px; /* Space between icon and input */
+}
+
+/* Search icon styling */
+.search-icon {
+    color: #333; /* Icon color */
+    font-size: 20px; /* Icon size */
+}
+
+/* Button Section */
+.buttons-section {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+/* Button Section */
+.buttons-section {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.module-title {
+    font-size: 24px; /* Keep the size */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center align the text */
+    font-style: italic; /* Italicize the text */
+    margin: 10px 0; /* Adjust margins */
+}
+
+/* Style for list items */
+.module ul li {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space between class name and button */
+    align-items: center; /* Center vertically */
+    margin-bottom: 8px; /* Space between items */
+}
+
+/* View link button styling */
+a.view-btn {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Padding for a larger clickable area */
+    border-radius: 25px; /* Rounded edges */
+    font-family: 'Courier New', Courier, monospace; /* Use a handwritten-like font */
+    font-size: 18px; /* Adjust font size */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    display: inline-flex; /* Align text and background properly */
+    align-items: center; /* Center the text vertically */
+    justify-content: center; /* Center the text horizontally */
+}
+
+/* Hover effect */
+a.view-btn:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
+
+
+
+.toggle-button {
+    background-color: #2A2A2A; /* Dark background */
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Padding for a larger clickable area */
+    border-radius: 25px; /* Rounded edges */
+    font-family: 'Courier New', Courier, monospace; /* Use a handwritten-like font */
+    font-size: 18px; /* Adjust font size */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    display: inline-flex; /* Align text and background properly */
+    align-items: center; /* Center the text vertically */
+    justify-content: center; /* Center the text horizontally */
+}
+
+.toggle-button:hover {
+    background-color: #555; 
+}
+
+/* Hidden input sections */
+.hidden {
+    display: none;
+}
+
+/* Form container styling */
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Input field styling */
+.input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-style: italic;
+    color: #aaa;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Sticky notes and modules layout */
+#sticky-notes-container,
+#modules-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+/* Sticky note styles */
+.sticky-note,
+.module {
+    width: 300px; /* Increased width for better visibility */
+    background-color: rgb(254 240 138);
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+}
+
+.module {
+    background-color: #FFE4E6;
+}
+
+/* Tape effect on sticky notes */
+.sticky-note::before, .sticky-note::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.1);
+    top: -15px;
+}
+
+.sticky-note::before {
+    left: 20px;
+    transform: rotate(-20deg);
+}
+
+.sticky-note::after {
+    right: 20px;
+    transform: rotate(10deg);
+}
+
+/* Hover effect */
+.sticky-note:hover {
+    transform: rotate(-1deg);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Module card styling */
+.module-container {
+    text-align: center;
+    width: 300px;
+}
+
+.module-card {
+    background-color: #e8a3c9;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.module-content {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Delete Button Styling */
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    color: red;
+    transition: transform 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: none;
+    transform: scale(1.2);
+}
+
+/* Hover effect for modules */
+.module:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Add a smoother hover effect for module cards */
+.module {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Add this CSS to your style.css file */
+.moduleinnertitle {
+    display: inline-block;
+    background-color: #f3f3f3; /* Light background color */
+    color: #333; /* Dark text color */
+    font-family: 'Poppins', cursive; /* Font family */
+    font-size: 20px; /* Font size */
+    font-weight: bold; /* Font weight */
+    text-align: center; /* Center text */
+    border: 2px solid #333; /* Dark border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 25px; /* Vertical and horizontal padding */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+    margin-left: 10px; /* Space between text and button */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+.moduleinnertitle :hover {
+    background-color: #e0e0e0; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+
+
+.sticky-note-title {
+    display: inline-block; /* Ensure it's treated as a block element */
+    background-color: #f3f3f3; /* Light background color */
+    color: #333; /* Dark text color */
+    font-family: 'Poppins', cursive; /* Font family */
+    font-size: 20px; /* Font size */
+    font-weight: bold; /* Font weight */
+    text-align: center; /* Center text */
+    border: 2px solid #333; /* Dark border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 25px; /* Vertical and horizontal padding */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+    margin: 10px auto; /* Centering and spacing */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
+}
+
+/* Hover effect for sticky note title */
+.sticky-note-title:hover {
+    background-color: #e0e0e0; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge title on hover */
+}
+
+
+.section-heading {
+    font-size: 36px; /* Adjust size for emphasis */
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center align the text */
+    font-style: italic; /* Italicize the text */
+    margin: 20px 0; /* Space around the title */
+    position: relative; /* For positioning pseudo-elements */
+}
+
+/* Style for the circles around letters */
+.letter-circle {
+    display: inline-block;
+    background-color: #333; /* Background color for the circles */
+    color: #fff; /* Text color */
+    border-radius: 50%; /* Make it circular */
+    width: 50px; /* Width of the circles */
+    height: 50px; /* Height of the circles */
+    line-height: 50px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
+    margin: 0 5px; /* Space between circles */
+    font-family: 'Your Handwritten Font', cursive; /* Replace with your desired font */
+    font-weight: normal; /* Regular weight for the letters */
+    font-size: 20px; /* Adjust the font size */
+}
+
+/* Optional: Add a decorative element before and after */
+.section-heading::before,
+.section-heading::after {
+    content: '';
+    position: absolute;
+    width: 20px; /* Adjust for decoration */
+    height: 20px; /* Adjust for decoration */
+    background-color: #f0e68c; /* Background color for decoration */
+    border-radius: 50%; /* Make it circular */
+}
+.section-heading::before {
+    left: -30px; /* Adjust positioning */
+    top: -5px; /* Adjust positioning */
+}
+.section-heading::after {
+    right: -30px; /* Adjust positioning */
+    top: -5px; /* Adjust positioning */
+}
+
